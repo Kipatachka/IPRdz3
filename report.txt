@@ -1,0 +1,131 @@
+запуск 1
+time="2026-11-24T22:28:30+03:00" level=warning msg="Docker Compose is configured to build using Bake, but buildx isn't installed"
+ app  Built
+ Network check-1795548497-178729_default  Creating
+ Network check-1795548497-178729_default  Created
+ Volume check-1795548497-178729_redis_data  Creating
+ Volume check-1795548497-178729_redis_data  Created
+ Container check-1795548497-178729-app-1  Creating
+ Container check-1795548497-178729-redis-1  Creating
+ Container check-1795548497-178729-app-1  Created
+ Container check-1795548497-178729-redis-1  Created
+ Container check-1795548497-178729-redis-1  Starting
+ Container check-1795548497-178729-app-1  Starting
+ Container check-1795548497-178729-redis-1  Started
+ Container check-1795548497-178729-app-1  Started
+счётчик: 3
+ Container check-1795548497-178729-app-1  Recreate
+ Container check-1795548497-178729-app-1  Recreated
+ Container check-1795548497-178729-app-1  Starting
+ Container check-1795548497-178729-app-1  Started
+после пересоздания: 3
+ Container check-1795548497-178729-redis-1  Stopping
+ Container check-1795548497-178729-redis-1  Stopped
+get /healthz: 200
+get /readyz: 503
+post /increment: 503
+ Container check-1795548497-178729-redis-1  Starting
+ Container check-1795548497-178729-redis-1  Started
+после восстановления: 4
+ Container check-1795548497-178729-app-1  Stopping
+ Container check-1795548497-178729-app-1  Stopped
+ Container check-1795548497-178729-redis-1  Stopping
+ Container check-1795548497-178729-redis-1  Stopped
+копия: /tmp/check-1795548497-178729-redis-backup-TOJnv1.tar
+фул проверки пройдены
+ Container check-1795548497-178729-app-1  Stopping
+ Container check-1795548497-178729-redis-1  Stopping
+ Container check-1795548497-178729-app-1  Stopped
+ Container check-1795548497-178729-app-1  Removing
+ Container check-1795548497-178729-redis-1  Stopped
+ Container check-1795548497-178729-redis-1  Removing
+ Container check-1795548497-178729-app-1  Removed
+ Container check-1795548497-178729-redis-1  Removed
+ Volume check-1795548497-178729_redis_data  Removing
+ Network check-1795548497-178729_default  Removing
+ Volume check-1795548497-178729_redis_data  Removed
+ Network check-1795548497-178729_default  Removed
+код завершения: 0
+
+запуск 2
+time="2026-11-24T22:29:41+03:00" level=warning msg="Docker Compose is configured to build using Bake, but buildx isn't installed"
+ app  Built
+ Network check-1795548581-180898_default  Creating
+ Network check-1795548581-180898_default  Created
+ Volume check-1795548581-180898_redis_data  Creating
+ Volume check-1795548581-180898_redis_data  Created
+ Container check-1795548581-180898-app-1  Creating
+ Container check-1795548581-180898-redis-1  Creating
+ Container check-1795548581-180898-app-1  Created
+ Container check-1795548581-180898-redis-1  Created
+ Container check-1795548581-180898-app-1  Starting
+ Container check-1795548581-180898-redis-1  Starting
+ Container check-1795548581-180898-app-1  Started
+ Container check-1795548581-180898-redis-1  Started
+счётчик: 3
+ Container check-1795548581-180898-app-1  Recreate
+ Container check-1795548581-180898-app-1  Recreated
+ Container check-1795548581-180898-app-1  Starting
+ Container check-1795548581-180898-app-1  Started
+после пересоздания: 3
+ Container check-1795548581-180898-redis-1  Stopping
+ Container check-1795548581-180898-redis-1  Stopped
+get /healthz: 200
+get /readyz: 503
+post /increment: 503
+ Container check-1795548581-180898-redis-1  Starting
+ Container check-1795548581-180898-redis-1  Started
+после восстановления: 4
+ Container check-1795548581-180898-app-1  Stopping
+ Container check-1795548581-180898-app-1  Stopped
+ Container check-1795548581-180898-redis-1  Stopping
+ Container check-1795548581-180898-redis-1  Stopped
+копия: /tmp/check-1795548581-180898-redis-backup-nAbdqv.tar
+фул проверки пройдены
+ Container check-1795548581-180898-redis-1  Stopping
+ Container check-1795548581-180898-app-1  Stopping
+ Container check-1795548581-180898-redis-1  Stopped
+ Container check-1795548581-180898-redis-1  Removing
+ Container check-1795548581-180898-app-1  Stopped
+ Container check-1795548581-180898-app-1  Removing
+ Container check-1795548581-180898-redis-1  Removed
+ Container check-1795548581-180898-app-1  Removed
+ Network check-1795548581-180898_default  Removing
+ Volume check-1795548581-180898_redis_data  Removing
+ Volume check-1795548581-180898_redis_data  Removed
+ Network check-1795548581-180898_default  Removed
+код завершения: 0
+
+логи приложения
+app-1  | 2026-11-24 19:25:51,082 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:26:01,195 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:26:11,346 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:26:21,516 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:26:31,664 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:26:41,838 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:26:51,998 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:27:02,122 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:27:12,272 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:27:22,420 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:27:32,529 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:27:42,704 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:27:52,828 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:28:02,982 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:28:13,126 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:28:23,266 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:28:33,413 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:28:43,557 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:28:53,700 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:29:03,841 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:29:13,941 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:29:24,081 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:29:34,229 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:29:44,409 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:29:54,540 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:30:04,694 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:30:14,833 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:30:25,013 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:30:35,128 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:30:45,328 http 127.0.0.1 "GET /healthz HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:32:13,341 http 172.20.0.1 "GET / HTTP/1.1" 200 -
+app-1  | 2026-11-24 19:32:13,361 http 172.20.0.1 "POST /increment HTTP/1.1" 200 -
